@@ -1,0 +1,16 @@
+module SS
+(
+	inout [31:0] USER,
+	int SET,
+	input [31:0] ROMI,
+	output [31:0] ROMO
+);
+always @(*)begin
+	if(SET) begin
+		ROMO<=USER;
+	end else begin
+		USER<=ROMI;
+	end
+end
+
+endmodule
